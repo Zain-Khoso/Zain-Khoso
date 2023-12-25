@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **Nextjs**
 
-- 👯 I’m looking to collaborate on **any we project.**
+- 👯 I’m looking to collaborate on **any web project.**
 
 - 👨‍💻 All of my projects are available at [https://github.com/Zain-Khoso?tab=repositories](https://github.com/Zain-Khoso?tab=repositories)
 
