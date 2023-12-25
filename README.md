@@ -26,7 +26,7 @@
 
 ###
 
-<p align="left">I'm Zain from Pakistan<br><br>🔭 I’m currently working on [Belly Brains](https://belly-brains.vercel.app)<br><br>🌱 I’m currently learning Nextjs<br><br>👯 I’m looking to collaborate on any web project.</p>
+<p align="left">I'm Zain from Pakistan<br><br>🔭 I’m currently working on a personal project <br><br>🌱 I’m currently learning Nextjs<br><br>👯 I’m looking to collaborate on any web project.</p>
 
 ###
 
