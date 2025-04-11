@@ -5,9 +5,6 @@ import { Finger_Paint } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 
-// Components.
-import Navbar from "./Navbar";
-
 // Font Setup.
 const FontFingerPaint = Finger_Paint({
   weight: "400",
@@ -50,8 +47,6 @@ export default function PageChangeTransition({ children }: ChildrenProp) {
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
-
-        <Navbar />
 
         <div className="h-[calc(100vh-6rem)]">{children}</div>
       </main>

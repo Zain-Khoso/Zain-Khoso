@@ -6,6 +6,7 @@ import "./globals.css";
 
 // Components.
 import PageChangeTransition from "@/components/PageChangeTransition";
+import Navbar from "@/components/Navbar";
 
 // Types.
 import { Metadata } from "next";
@@ -91,7 +92,10 @@ export default function RootLayout({ children }: ChildrenProp) {
   return (
     <html lang="en">
       <body className={`${FontOpenSans.className} antialiased`}>
-        <PageChangeTransition>{children}</PageChangeTransition>
+        <PageChangeTransition>
+          <Navbar />
+          {children}
+        </PageChangeTransition>
       </body>
     </html>
   );
