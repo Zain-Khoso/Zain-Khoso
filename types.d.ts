@@ -1,1 +1,1 @@
-type children = Readonly<React.ReactNode>;
+type ChildrenProp = { children: Readonly<React.ReactNode> };

@@ -5,7 +5,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
 // Components.
-import TransitionProvider from "@/components/TransitionProvider";
+import PageChangeTransition from "@/components/PageChangeTransition";
 
 // Types.
 import { Metadata } from "next";
@@ -87,11 +87,11 @@ const FontOpenSans = Open_Sans({
 });
 
 // Portfolio's Root Layout.
-export default function RootLayout({ children }: { children: children }) {
+export default function RootLayout({ children }: ChildrenProp) {
   return (
     <html lang="en">
       <body className={`${FontOpenSans.className} antialiased`}>
-        <TransitionProvider>{children}</TransitionProvider>
+        <PageChangeTransition>{children}</PageChangeTransition>
       </body>
     </html>
   );
