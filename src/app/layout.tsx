@@ -1,5 +1,5 @@
 // Lib Imports.
-import { Rasa, Finger_Paint } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 
 // Styles.
 import "./globals.css";
@@ -81,22 +81,16 @@ export const metadata: Metadata = {
 };
 
 // Portfolio Fonts.
-const FontRasa = Rasa({
+const FontOpenSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-rasa",
-});
-const FontFingerPaint = Finger_Paint({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-finger-paint",
+  display: "swap",
 });
 
 // Portfolio's Root Layout.
 export default function RootLayout({ children }: { children: children }) {
   return (
     <html lang="en">
-      <body
-        className={`${FontRasa.variable} ${FontFingerPaint.variable} antialiased`}>
+      <body className={`${FontOpenSans.className} antialiased`}>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
