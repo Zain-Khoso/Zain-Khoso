@@ -1,11 +1,22 @@
 "use client";
 
+// Lib Imports.
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import NavLink from "./NavLink";
 import { motion } from "motion/react";
 
+// Static Assets.
+import LogoLinkedIn from "@/assets/icons/linkedin.svg";
+import LogoInstagram from "@/assets/icons/instagram.svg";
+import LogoX from "@/assets/icons/x.svg";
+import LogoGithub from "@/assets/icons/github.svg";
+
+// Components.
+import NavLink from "./Link";
+import Label from "./Label";
+
+// Page links index.
 const links = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
@@ -13,6 +24,7 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 
+// App's root navbar component.
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -25,6 +37,7 @@ const Navbar = () => {
       backgroundColor: "rgb(255,255,255)",
     },
   };
+
   const centerVariants = {
     closed: {
       opacity: 1,
@@ -69,45 +82,44 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
-      {/* LINKS */}
-      <div className="hidden md:flex gap-4 w-1/3">
+    <nav className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+      {/* Page Links */}
+      <ul className="hidden md:flex gap-4 w-1/3 justify-start">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
-      </div>
-      {/* LOGO */}
-      <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
-        <Link
-          href="/"
-          className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-center">
-          <span className="text-white mr-1">Lama</span>
-          <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">
-            .dev
-          </span>
+      </ul>
+
+      {/* Brand Label */}
+      <Label />
+
+      {/* Social Media Links */}
+      <div className="hidden md:flex gap-4 w-1/3 justify-end">
+        <Link href="https://github.com/Zain-Khoso" target="_blank">
+          <Image src={LogoGithub} alt="Github" className="w-8 aspect-square" />
+        </Link>
+
+        <Link href="https://linkedin.com/in/zain-khoso" target="_blank">
+          <Image
+            src={LogoLinkedIn}
+            alt="LinkedIn"
+            className="w-8 aspect-square"
+          />
+        </Link>
+
+        <Link href="https://instagram.com/zain__khoso" target="_blank">
+          <Image
+            src={LogoInstagram}
+            alt="Instagram"
+            className="w-8 aspect-square"
+          />
+        </Link>
+
+        <Link href="https://x.com/Zain_Khoso_Dev" target="_blank">
+          <Image src={LogoX} alt="X" className="w-8 aspect-square" />
         </Link>
       </div>
-      {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="/">
-          <Image src="/github.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/dribbble.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/instagram.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/facebook.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
-          <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>
-      </div>
+
       {/* RESPONSIVE MENU */}
       <div className="md:hidden">
         {/* MENU BUTTON */}
@@ -145,7 +157,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
-    </div>
+    </nav>
   );
 };
 
