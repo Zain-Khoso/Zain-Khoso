@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Zain Khoso - Fullstack JavaScript Developer",
     description: "",
     images: ["/og-image.jpg"],
-    creator: "@ZainKhoso",
+    creator: "@Zain_Khoso_Dev",
   },
   robots: {
     index: true,
