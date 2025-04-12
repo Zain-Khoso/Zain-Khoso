@@ -24,7 +24,7 @@ const links = [
 // App's root navbar component.
 export default function Navbar() {
   return (
-    <nav className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <nav className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 2xl:px-48 text-xl">
       {/* Page Links */}
       <ul className="hidden md:flex gap-4 w-1/3 justify-start">
         {links.map((link) => (

@@ -4,7 +4,7 @@ import Link from "next/link";
 // Brand label in the navbar.
 export default function Label() {
   return (
-    <div className="md:hidden lg:flex xl:w-1/3 xl:justify-center">
+    <div className="md:hidden xl:flex xl:w-1/3 xl:justify-center">
       <Link
         href="/"
         className="text-sm bg-primary rounded-md p-2 font-semibold flex items-center justify-between gap-1">
