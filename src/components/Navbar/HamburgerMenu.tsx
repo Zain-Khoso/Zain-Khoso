@@ -159,7 +159,12 @@ export default function HamburgerMenu({ links }: Props) {
 
         <footer className="flex w-full flex-row justify-between px-8 py-4">
           {socialLinks.map((link) => (
-            <Link key={link.title} href={link.href} target="_blank">
+            <Link
+              key={link.title}
+              href={link.href}
+              target="_blank"
+              className="hover:border-primary focus:border-primary visited:border-primary rounded-full border-2 border-transparent p-1"
+            >
               <Image
                 src={link.icon}
                 alt={link.title}
