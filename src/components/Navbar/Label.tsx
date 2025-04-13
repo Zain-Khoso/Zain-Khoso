@@ -4,12 +4,13 @@ import Link from "next/link";
 // Brand label in the navbar.
 export default function Label() {
   return (
-    <div className="md:hidden xl:flex xl:w-1/3 xl:justify-center">
+    <div className="z-20 md:hidden xl:flex xl:w-1/3 xl:justify-center">
       <Link
         href="/"
-        className="text-sm bg-primary rounded-md p-2 font-semibold flex items-center justify-between gap-1">
+        className="bg-primary flex items-center justify-between gap-1 rounded-md p-2 text-sm font-semibold"
+      >
         <span className="text-white">Zain</span>
-        <span className="rounded bg-white text-black flex items-center justify-center p-1">
+        <span className="flex items-center justify-center rounded bg-white p-1 text-black">
           Khoso
         </span>
       </Link>
