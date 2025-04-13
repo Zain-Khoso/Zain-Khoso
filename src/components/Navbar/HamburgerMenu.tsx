@@ -3,11 +3,12 @@
 // Lib Imports.
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useMemo, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 
 // Utils.
 import getSocialMediaHandles from "@/utils/getSocialMediaHandles";
+import Label from "./Label";
 
 // Types.
 type Props = {
@@ -20,7 +21,6 @@ type Props = {
 // HamburgerMenu component.
 export default function HamburgerMenu({ links }: Props) {
   const [isOpen, setIsOpen] = useState(false);
-
   const socialLinks = getSocialMediaHandles();
 
   useLayoutEffect(() => {
@@ -31,124 +31,125 @@ export default function HamburgerMenu({ links }: Props) {
     }
   }, [isOpen]);
 
-  const buttonSlice1Variants = useMemo(
-    () => ({
-      open: {
-        rotate: 45,
-        y: 10,
-        width: "1.5rem",
+  const buttonSlice1Variant = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+    },
+  };
+
+  const buttonSlice2Variant = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+
+  const buttonSlice3Variant = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+    },
+  };
+
+  const menuVariants = {
+    closed: {
+      x: "100vw",
+    },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
       },
-      closed: { rotate: 0, y: 0 },
-    }),
-    [],
-  );
+    },
+  };
 
-  const buttonSlice2Variants = useMemo(
-    () => ({
-      open: { opacity: 0 },
-      closed: { opacity: 1 },
-    }),
-    [],
-  );
-
-  const buttonSlice3Variants = useMemo(
-    () => ({
-      open: {
-        rotate: -45,
-        y: -10,
-        width: "1.5rem",
-      },
-      closed: { rotate: 0, y: 0 },
-    }),
-    [],
-  );
-
-  const hamburgerMenuVariants = useMemo(
-    () => ({
-      open: {
-        left: 0,
-      },
-      closed: { left: "100dvw" },
-    }),
-    [],
-  );
-
-  const pageLinksVariants = useMemo(
-    () => ({
-      open: { x: 0 },
-      closed: { x: -20 },
-    }),
-    [],
-  );
+  const pageLinkVariants = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    opened: {
+      x: 0,
+      opacity: 1,
+    },
+  };
 
   return (
     <>
       <button
-        className="relative z-20 flex h-6 w-8 cursor-pointer flex-col items-center justify-between"
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
+        className="relative z-50 flex h-8 w-10 cursor-pointer flex-col justify-between md:hidden"
+        onClick={() => setIsOpen((prev) => !prev)}
       >
-        <motion.span
-          variants={buttonSlice1Variants}
-          initial="closed"
-          animate={isOpen ? "open" : "closed"}
-          className="h-1 min-h-1 w-full rounded-lg bg-black/80"
+        <motion.div
+          variants={buttonSlice1Variant}
+          animate={isOpen ? "opened" : "closed"}
+          className="h-1 w-10 origin-left rounded bg-black"
         />
-        <motion.span
-          variants={buttonSlice2Variants}
-          initial="closed"
-          animate={isOpen ? "open" : "closed"}
-          className="h-1 min-h-1 w-full rounded-lg bg-black/80"
+        <motion.div
+          variants={buttonSlice2Variant}
+          animate={isOpen ? "opened" : "closed"}
+          className="h-1 w-10 rounded bg-black"
         />
-        <motion.span
-          variants={buttonSlice3Variants}
-          initial="closed"
-          animate={isOpen ? "open" : "closed"}
-          className="h-1 min-h-1 w-full rounded-lg bg-black/80"
+        <motion.div
+          variants={buttonSlice3Variant}
+          animate={isOpen ? "opened" : "closed"}
+          className="h-1 w-10 origin-left rounded bg-black"
         />
       </button>
 
-      <motion.aside
-        variants={hamburgerMenuVariants}
-        transition={{ type: "spring", staggerChildren: 0.2 }}
-        initial={"closed"}
-        animate={isOpen ? "open" : "closed"}
-        className="fixed top-0 left-0 z-10 flex h-screen max-h-screen w-screen flex-col items-center justify-between bg-white"
-      >
-        <header className="flex w-full flex-col items-start justify-center px-4 py-6"></header>
+      {isOpen && (
+        <motion.aside
+          variants={menuVariants}
+          initial="closed"
+          animate="opened"
+          className="fixed top-0 left-0 z-10 flex h-screen max-h-screen w-screen flex-col items-center justify-between bg-white md:hidden"
+        >
+          <header className="flex w-full flex-col items-start justify-center px-4 py-6">
+            <Label />
+          </header>
 
-        <main className="w-full">
-          <ul className="flex flex-col items-center justify-start gap-4">
-            {links.map((link) => (
-              <motion.li key={link.title} variants={pageLinksVariants}>
-                <Link
-                  key={link.title}
-                  href={link.url}
-                  className="hover:bg-primary rounded-full px-3 py-1 text-2xl font-medium text-black/70 transition duration-300 ease-in-out hover:font-bold hover:text-white"
-                >
-                  {link.title}
-                </Link>
-              </motion.li>
+          <main className="w-full">
+            <ul className="flex flex-col items-center justify-start gap-4">
+              {links.map((link) => (
+                <motion.li key={link.title} variants={pageLinkVariants}>
+                  <Link
+                    key={link.title}
+                    href={link.url}
+                    className="hover:bg-primary rounded-full px-3 py-1 text-2xl font-medium text-black/70 transition duration-300 ease-in-out hover:font-bold hover:text-white"
+                  >
+                    {link.title}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </main>
+
+          <footer className="flex w-full flex-row justify-between px-8 py-4">
+            {socialLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                target="_blank"
+                className="hover:border-primary focus:border-primary visited:border-primary rounded-full border-2 border-transparent p-1"
+              >
+                <Image
+                  src={link.icon}
+                  alt={link.title}
+                  className="aspect-square h-8 w-8"
+                />
+              </Link>
             ))}
-          </ul>
-        </main>
-
-        <footer className="flex w-full flex-row justify-between px-8 py-4">
-          {socialLinks.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              target="_blank"
-              className="hover:border-primary focus:border-primary visited:border-primary rounded-full border-2 border-transparent p-1"
-            >
-              <Image
-                src={link.icon}
-                alt={link.title}
-                className="aspect-square h-8 w-8"
-              />
-            </Link>
-          ))}
-        </footer>
-      </motion.aside>
+          </footer>
+        </motion.aside>
+      )}
     </>
   );
 }

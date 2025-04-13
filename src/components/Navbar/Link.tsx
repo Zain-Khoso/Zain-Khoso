@@ -16,10 +16,11 @@ const NavLink = ({ link }: Props) => {
   return (
     <li>
       <Link
-        className={`rounded-full px-3 py-1 font-medium text-black/70 ${
-          pathName === link.url && "bg-primary text-white font-bold"
+        className={`hover:border-primary rounded-full border-2 border-transparent px-3 py-1 font-medium text-black/70 ${
+          pathName === link.url && "bg-primary font-bold text-white"
         }`}
-        href={link.url}>
+        href={link.url}
+      >
         {link.title}
       </Link>
     </li>
