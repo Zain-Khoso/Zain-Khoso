@@ -6,11 +6,8 @@ import Link from "next/link";
 import { useState, useMemo, useLayoutEffect } from "react";
 import { motion } from "motion/react";
 
-// Static Assets.
-import LogoLinkedIn from "@/assets/icons/linkedin.svg";
-import LogoInstagram from "@/assets/icons/instagram.svg";
-import LogoX from "@/assets/icons/x.svg";
-import LogoGithub from "@/assets/icons/github.svg";
+// Utils.
+import getSocialMediaHandles from "@/utils/getSocialMediaHandles";
 
 // Types.
 type Props = {
@@ -20,33 +17,11 @@ type Props = {
   }[];
 };
 
-// Data.
-const socialLinks = [
-  {
-    href: "https://instagram.com/zain__khoso",
-    title: "instagram",
-    icon: LogoInstagram,
-  },
-  {
-    href: "https://github.com/Zain-Khoso",
-    title: "Github",
-    icon: LogoGithub,
-  },
-  {
-    href: "https://linkedin.com/in/zain-khoso",
-    title: "LinkedIn",
-    icon: LogoLinkedIn,
-  },
-  {
-    href: "https://x.com/Zain_Khoso_Dev",
-    title: "X",
-    icon: LogoX,
-  },
-];
-
 // HamburgerMenu component.
 export default function HamburgerMenu({ links }: Props) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const socialLinks = getSocialMediaHandles();
 
   useLayoutEffect(() => {
     if (isOpen) {

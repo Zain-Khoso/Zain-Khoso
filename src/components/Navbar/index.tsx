@@ -8,6 +8,9 @@ import LogoInstagram from "@/assets/icons/instagram.svg";
 import LogoX from "@/assets/icons/x.svg";
 import LogoGithub from "@/assets/icons/github.svg";
 
+// Utils.
+import getSocialMediaHandles from "@/utils/getSocialMediaHandles";
+
 // Components.
 import NavLink from "./Link";
 import Label from "./Label";
@@ -23,10 +26,12 @@ const links = [
 
 // App's root navbar component.
 export default function Navbar() {
+  const socialLinks = getSocialMediaHandles();
+
   return (
-    <nav className="h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 2xl:px-48 text-xl">
+    <nav className="flex h-24 items-center justify-between px-4 text-xl sm:px-8 md:px-12 lg:px-20 2xl:px-48">
       {/* Page Links */}
-      <ul className="hidden md:flex gap-4 w-1/3 justify-start">
+      <ul className="hidden w-1/3 justify-start gap-4 md:flex">
         {links.map((link) => (
           <NavLink link={link} key={link.title} />
         ))}
@@ -36,30 +41,16 @@ export default function Navbar() {
       <Label />
 
       {/* Social Media Links */}
-      <div className="hidden md:flex gap-4 w-1/3 justify-end">
-        <Link href="https://github.com/Zain-Khoso" target="_blank">
-          <Image src={LogoGithub} alt="Github" className="w-8 aspect-square" />
-        </Link>
-
-        <Link href="https://linkedin.com/in/zain-khoso" target="_blank">
-          <Image
-            src={LogoLinkedIn}
-            alt="LinkedIn"
-            className="w-8 aspect-square"
-          />
-        </Link>
-
-        <Link href="https://instagram.com/zain__khoso" target="_blank">
-          <Image
-            src={LogoInstagram}
-            alt="Instagram"
-            className="w-8 aspect-square"
-          />
-        </Link>
-
-        <Link href="https://x.com/Zain_Khoso_Dev" target="_blank">
-          <Image src={LogoX} alt="X" className="w-8 aspect-square" />
-        </Link>
+      <div className="hidden w-1/3 justify-end gap-4 md:flex">
+        {socialLinks.map((link) => (
+          <Link key={link.title} href={link.href} target="_blank">
+            <Image
+              src={link.icon}
+              alt={link.title}
+              className="aspect-square w-8"
+            />
+          </Link>
+        ))}
       </div>
 
       {/* Hamburger Menu */}
