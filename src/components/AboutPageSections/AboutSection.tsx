@@ -2,22 +2,19 @@
 
 // Lib Imports.
 import Image from "next/image";
-import { Finger_Paint } from "next/font/google";
 
 // Assets.
 import Hero from "@/assets/images/hero.png";
 
 // Components.
+import SectionTitle from "../SectionTitle";
 import Highlighter from "../Highlighter";
 import JumpSectionButton from "../JumpSectionButton";
-
-// Font Setup.
-const FontFingerPaint = Finger_Paint({ weight: "400", subsets: ["latin"] });
 
 // Component used inside about page to show my about informartion.
 export default function AboutSection() {
   return (
-    <section className="w-1/2 space-y-16 pt-36">
+    <section className="w-1/2 space-y-16">
       {/* My Picture */}
       <Image
         alt="Zain Khoso"
@@ -27,7 +24,7 @@ export default function AboutSection() {
 
       {/* About information section */}
       <article className="space-y-6">
-        <h4 className="text-3xl font-bold text-black/75">Chronicle</h4>
+        <SectionTitle>Chronicle</SectionTitle>
 
         <p className="text-justify text-lg font-semibold text-black/70">
           Hi, I'm <Highlighter>Zain ul Abdin Khoso</Highlighter>, a fullstack
@@ -40,7 +37,7 @@ export default function AboutSection() {
         </p>
       </article>
 
-      <JumpSectionButton />
+      <JumpSectionButton id="techstack" />
     </section>
   );
 }

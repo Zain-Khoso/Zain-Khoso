@@ -91,7 +91,9 @@ const FontOpenSans = Open_Sans({
 export default function RootLayout({ children }: ChildrenProp) {
   return (
     <html lang="en">
-      <body className={`${FontOpenSans.className} antialiased`}>
+      <body
+        className={`${FontOpenSans.className} from-primary/10 to-secondary/15 h-screen w-screen overflow-hidden bg-gradient-to-b antialiased`}
+      >
         <PageChangeTransition>
           <Navbar />
           {children}

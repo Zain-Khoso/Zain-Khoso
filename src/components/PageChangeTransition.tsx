@@ -25,7 +25,7 @@ export default function PageChangeTransition({ children }: ChildrenProp) {
     <AnimatePresence mode="wait">
       <main
         key={pathName}
-        className="from-primary/10 to-secondary/15 h-screen w-screen bg-gradient-to-b"
+        className="h-full w-full overflow-x-hidden overflow-y-auto bg-transparent"
       >
         <motion.div
           className="fixed z-40 h-screen w-screen rounded-b-[100px] bg-amber-50"
