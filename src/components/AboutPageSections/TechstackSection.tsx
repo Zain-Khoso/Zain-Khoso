@@ -28,7 +28,7 @@ export default function TechstackSection() {
         ))}
       </ul>
 
-      <JumpSectionButton />
+      <JumpSectionButton id="experience" />
     </section>
   );
 }

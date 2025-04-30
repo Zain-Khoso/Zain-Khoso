@@ -12,12 +12,10 @@
   --color-secondary: oklch(76.9% 0.188 70.08);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+* {
+  scroll-behavior: smooth;
+  scroll-margin-block: 10rem;
+}
 
 body {
   color: var(--foreground);
