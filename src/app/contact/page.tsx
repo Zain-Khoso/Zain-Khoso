@@ -3,7 +3,7 @@
 // Lib Imports.
 import { motion } from "motion/react";
 import { FormEvent, useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 // Components.
 import Highlighter from "@/components/Highlighter";
@@ -12,32 +12,32 @@ import { Button } from "@/components/Button";
 export default function ContactPage() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Your personalized web presence is just clicks away.";
 
-  const form = useRef(null);
+  const form = useRef<null | HTMLFormElement>(null);
 
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
-    console.log(form.current);
 
-    // emailjs
-    //   .sendForm(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     form.current,
-    //     process.env.NEXT_PUBLIC_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setSuccess(true);
-    //       form.current.reset();
-    //     },
-    //     () => {
-    //       setError(true);
-    //     }
-    //   );
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+        form.current,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY as string,
+      )
+      .then(
+        () => {
+          setSuccess(true);
+          form.current?.reset();
+        },
+        () => {
+          setError(true);
+        },
+      );
   };
 
   return (
@@ -62,21 +62,25 @@ export default function ContactPage() {
             Dear <Highlighter>Zain Ul Abdin</Highlighter>,
           </span>
           <textarea
+            required
+            name="message"
             rows={6}
             className="resize-none border-b-2 border-b-black bg-transparent outline-none"
-            name="user_message"
           />
 
           <span>My mail address is:</span>
           <input
+            type="email"
             name="user_email"
-            type="text"
+            required
             className="border-b-2 border-b-black bg-transparent outline-none"
           />
 
           <span>Regards</span>
 
-          <Button variant="ghost">Send</Button>
+          <Button type="submit" variant="ghost">
+            Send
+          </Button>
 
           {success && (
             <span className="font-semibold text-green-600">
