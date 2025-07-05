@@ -1,12 +1,18 @@
 "use client";
+
+// Lib Imports.
 import { motion } from "motion/react";
 import { FormEvent, useRef, useState } from "react";
 // import emailjs from "@emailjs/browser";
 
-const ContactPage = () => {
+// Components.
+import Highlighter from "@/components/Highlighter";
+import { Button } from "@/components/Button";
+
+export default function ContactPage() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const text = "Say Hello";
+  const text = "Your personalized web presence is just clicks away.";
 
   const form = useRef(null);
 
@@ -39,62 +45,52 @@ const ContactPage = () => {
       className="h-full"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
-      transition={{ duration: 1 }}>
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
-          <div>
-            {text.split("").map((letter, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  delay: index * 0.1,
-                }}>
-                {letter}
-              </motion.span>
-            ))}
-            😊
-          </div>
-        </div>
+      transition={{ duration: 1 }}
+    >
+      <section className="flex h-full flex-col px-4 sm:px-8 md:px-12 lg:flex-row lg:px-20 xl:px-48">
+        <article className="flex h-1/2 items-center justify-center text-6xl lg:h-full lg:w-1/2">
+          <h4 className="text-6xl">Say Hello! 🙂</h4>
+        </article>
+
         {/* FORM CONTAINER */}
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24">
-          <span>Dear Lama Dev,</span>
+          className="flex h-1/2 flex-col justify-center gap-8 rounded-xl bg-amber-50 p-24 text-xl lg:h-full lg:w-1/2"
+        >
+          <span>
+            Dear <Highlighter>Zain Ul Abdin</Highlighter>,
+          </span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="resize-none border-b-2 border-b-black bg-transparent outline-none"
             name="user_message"
           />
+
           <span>My mail address is:</span>
           <input
             name="user_email"
             type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none"
+            className="border-b-2 border-b-black bg-transparent outline-none"
           />
+
           <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
-          </button>
+
+          <Button variant="ghost">Send</Button>
+
           {success && (
-            <span className="text-green-600 font-semibold">
+            <span className="font-semibold text-green-600">
               Your message has been sent successfully!
             </span>
           )}
+
           {error && (
-            <span className="text-red-600 font-semibold">
+            <span className="font-semibold text-red-600">
               Something went wrong!
             </span>
           )}
         </form>
-      </div>
+      </section>
     </motion.div>
   );
-};
-
-export default ContactPage;
+}

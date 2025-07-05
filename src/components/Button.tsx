@@ -5,7 +5,8 @@ import Link from "next/link";
 
 // Types.
 type Props = {
-  variant?: "default" | "outline";
+  type?: "submit" | "reset" | "button";
+  variant?: "default" | "outline" | "ghost";
 } & ChildrenProp;
 
 type ButtonProps = {
@@ -23,17 +24,20 @@ const variants = {
   default: "bg-primary hover:bg-primary/85 hover:border-primary/85 text-white",
   outline:
     "hover:bg-primary/15 hover:border-primary/15 text-primary bg-transparent",
+  ghost:
+    "bg-primary/15 text-primary border-primary/15 hover:bg-primary hover:text-white",
 };
 
 // General button component for the portfolio.
 export function Button({
+  type = "button",
   children,
   variant = "default",
   onClick,
 }: ButtonProps) {
   return (
     <button
-      type="button"
+      type={type}
       onClick={onClick}
       className={classNames + variants[variant]}
     >
