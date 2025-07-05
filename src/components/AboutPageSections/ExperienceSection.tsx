@@ -6,7 +6,6 @@ import Hero from "@/assets/images/hero.png";
 
 // Components.
 import SectionTitle from "../SectionTitle";
-import JumpSectionButton from "../JumpSectionButton";
 import ExperienceTile from "../ExperienceTile";
 
 // Component used inside about page to show my experiences.
@@ -36,8 +35,6 @@ export default function ExperienceSection() {
           rightSide={true}
         />
       </div>
-
-      <JumpSectionButton />
     </section>
   );
 }

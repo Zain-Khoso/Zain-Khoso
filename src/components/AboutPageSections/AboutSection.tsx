@@ -29,11 +29,11 @@ export default function AboutSection() {
         <p className="text-justify text-lg font-semibold text-black/70">
           Hi, I'm <Highlighter>Zain ul Abdin Khoso</Highlighter>, a fullstack
           Nextjs developer based in Sukkur, Pakistan. I like to write code that
-          is simple, not complex. I have built and delivered successful web
-          solutions, ranging from Social Media platforms to E-commerce sites.
-          These experiences have given me valuable hands-on experience with
-          diverse technologies, including the robust capabilities of Firebase
-          and Algolia.
+          is simple, not complex, yet it can achieve wonders. I have built and
+          delivered successful web solutions, ranging from Social Media
+          platforms to E-commerce sites. These experiences have given me
+          valuable hands-on experience with diverse technologies, including the
+          robust capabilities of Firebase and Algolia.
         </p>
       </article>
 

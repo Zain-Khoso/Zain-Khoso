@@ -15,7 +15,7 @@ export default function AboutPage() {
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
-      className="space-y-36 px-4 pt-36 sm:px-8 md:px-12 lg:px-20 xl:px-48"
+      className="space-y-36 px-4 py-36 sm:px-8 md:px-12 lg:px-20 xl:px-48"
     >
       <AboutSection />
 

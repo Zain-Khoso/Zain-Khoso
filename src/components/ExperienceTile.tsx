@@ -27,7 +27,7 @@ export default function ExperienceTile({
       className={`flex h-48 justify-between ${rightSide && "flex-row-reverse"}`}
     >
       <div className="w-1/3 space-y-4">
-        <Link href={companyLink} className="flex flex-row items-center gap-1">
+        <Link href={companyLink} className="flex flex-row items-center gap-2">
           <Image
             alt="Hippopitch Logo"
             src={companyLogo}
