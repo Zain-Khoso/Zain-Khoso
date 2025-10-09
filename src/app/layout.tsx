@@ -29,8 +29,7 @@ export default function RootLayout({ children }: Readonly<ChildrenProp>) {
   return (
     <html lang="en">
       <body
-        className={`${Font_Bebas.variable} ${Font_Manrope.variable} antialiased`}
-      >
+        className={`${Font_Bebas.variable} ${Font_Manrope.variable} antialiased`}>
         {children}
       </body>
     </html>
