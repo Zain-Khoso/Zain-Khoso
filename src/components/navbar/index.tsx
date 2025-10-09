@@ -1,5 +1,5 @@
 // Components.
-import H2 from '../typography';
+import { H2 } from '../typography';
 import HamburgerMenu from './HamburgerMenu';
 
 // This navbar is used for the entire app.

@@ -33,7 +33,8 @@ export default function RootLayout({ children }: Readonly<ChildrenProp>) {
     <html lang="en">
       <body className={`${Font_Bebas.variable} ${Font_Manrope.variable} antialiased`}>
         <Navbar />
-        {children}
+
+        <main className="my-4 space-y-8 px-4">{children}</main>
       </body>
     </html>
   );
