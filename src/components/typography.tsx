@@ -10,6 +10,7 @@ import { IconType } from 'react-icons';
 
 type HeadingProps = React.HTMLAttributes<HTMLHeadingElement>;
 type ParagraphProps = React.HTMLAttributes<HTMLParagraphElement>;
+type SpanProps = React.HTMLAttributes<HTMLSpanElement>;
 type LinkProps = React.HTMLAttributes<HTMLAnchorElement> & {
   href: string;
   target?: HTMLAttributeAnchorTarget;
@@ -51,6 +52,14 @@ export function Big({ children, className, ...props }: HeadingProps) {
     <h2 className={cn('font-heading text-[28px]', className)} {...props}>
       {children}
     </h2>
+  );
+}
+
+export function Small({ children, className, ...props }: SpanProps) {
+  return (
+    <span className={cn('text-[12px]', className)} {...props}>
+      {children}
+    </span>
   );
 }
 
