@@ -209,23 +209,6 @@ export default function LandingPage() {
           </article>
         </main>
       </section>
-
-      {/* About Me Section */}
-      {/* <section id="about" className="border-secondary-dark space-y-8 border-b-2 pb-12">
-        <header className="space-y-2">
-          <H2>About Me</H2>
-          <P className="max-w-3xl">
-            I am a Full-Stack Developer based in Sukkur, Pakistan. I have 1.5+ Years of remote work
-            experience at a Sweden based startup. In technologies like Typescript, Firebase
-            ecosystem and Algolia. I excel at writing clean, readable and efficient code. Currently,
-            I am exploring Node.js and Express.js.
-          </P>
-        </header>
-
-        <main>
-          <ThemedLink href="/about">Learn more about Me</ThemedLink>
-        </main>
-      </section> */}
     </>
   );
 }

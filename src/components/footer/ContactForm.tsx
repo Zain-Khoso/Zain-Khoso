@@ -27,7 +27,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="flex-1 space-y-6" onSubmit={handleSubmit}>
+    <form className="flex-2 space-y-6" onSubmit={handleSubmit}>
       <Input
         id="name"
         label="Name"
