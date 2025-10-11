@@ -38,7 +38,9 @@ export default function RootLayout({ children }: Readonly<ChildrenProp>) {
 
         <Navbar />
 
-        <main className="my-4 space-y-8 px-4">{children}</main>
+        <main className="mx-auto my-4 max-w-7xl space-y-8 px-4 md:px-8 lg:my-12 lg:space-y-10 xl:space-y-14">
+          {children}
+        </main>
 
         <Footer />
       </body>

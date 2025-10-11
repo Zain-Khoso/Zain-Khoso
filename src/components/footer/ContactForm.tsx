@@ -16,7 +16,7 @@ import { FormEventHandler } from 'react';
 
 // Contact Form at the footer.
 export default function ContactForm() {
-  const { isLoading, isError, data, sendMail, setData } = useContactForm();
+  const { isLoading, data, sendMail, setData } = useContactForm();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async function (event) {
     event.preventDefault();
@@ -27,7 +27,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit}>
+    <form className="flex-1 space-y-6" onSubmit={handleSubmit}>
       <Input
         id="name"
         label="Name"

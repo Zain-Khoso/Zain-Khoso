@@ -13,7 +13,10 @@ export default function HamburgerMenu() {
 
   return (
     <>
-      <button className="relative z-50 h-12 w-12 p-1" onClick={() => setIsOpen((val) => !val)}>
+      <button
+        className="relative z-50 h-12 w-12 p-1 md:hidden"
+        onClick={() => setIsOpen((val) => !val)}
+      >
         <span
           className={cn(
             'bg-secondary-light absolute left-1/2 h-1 w-4/5 -translate-1/2 rounded-full transition',
@@ -30,8 +33,8 @@ export default function HamburgerMenu() {
 
       <aside
         className={cn(
-          'bg-secondary-dark fixed top-0 z-40 flex h-dvh w-dvw flex-col items-center gap-[15%] transition-[left] duration-200',
-          isOpen ? 'left-0' : 'left-100'
+          'bg-secondary-dark fixed top-0 z-40 flex h-dvh w-dvw flex-col items-center gap-[15%] transition-[right] duration-200',
+          isOpen ? 'right-0' : '-right-[120%]'
         )}
       >
         {/* Placeholder element */}
@@ -39,13 +42,13 @@ export default function HamburgerMenu() {
 
         <ul className="flex flex-col items-center gap-8">
           <li>
-            <Link href="/#portfolio" className="text-xl">
-              Portfolio
+            <Link href="/about" className="text-xl">
+              About
             </Link>
           </li>
           <li>
-            <Link href="/#about" className="text-xl">
-              About
+            <Link href="/#portfolio" className="text-xl">
+              Portfolio
             </Link>
           </li>
           <li>

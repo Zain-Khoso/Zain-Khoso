@@ -33,8 +33,8 @@ export function Input({ id, label, name, className, ...props }: InputProps) {
   }, [isInvalid]);
 
   return (
-    <label className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-primary font-semibold">
+    <label className="flex cursor-text flex-col gap-2">
+      <label htmlFor={id} className="text-primary cursor-text font-semibold">
         {label}
       </label>
 
@@ -44,7 +44,7 @@ export function Input({ id, label, name, className, ...props }: InputProps) {
         name={name}
         className={cn(
           className,
-          'bg-secondary-dark text-primary-light outline-primary flex w-full min-w-0 rounded-md px-4 py-2 text-base shadow-none disabled:pointer-events-none',
+          'bg-secondary-dark text-primary-light outline-primary flex w-full min-w-0 cursor-text rounded-md px-4 py-2 text-base shadow-none disabled:pointer-events-none',
           isInvalid ? 'outline outline-rose-500' : 'outline-primary focus:outline'
         )}
         {...props}
@@ -70,8 +70,8 @@ export function Select({ id, label, name, className, children, ...props }: Selec
   }, [isInvalid]);
 
   return (
-    <label className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-primary font-semibold">
+    <label className="flex cursor-pointer flex-col gap-2">
+      <label htmlFor={id} className="text-primary cursor-pointer font-semibold">
         {label}
       </label>
 
@@ -81,7 +81,7 @@ export function Select({ id, label, name, className, children, ...props }: Selec
         name={name}
         className={cn(
           className,
-          'bg-secondary-dark text-primary-light flex w-full min-w-0 rounded-md px-4 py-2 text-base shadow-none disabled:pointer-events-none',
+          'bg-secondary-dark text-primary-light flex w-full min-w-0 cursor-pointer rounded-md px-4 py-2 text-base shadow-none disabled:pointer-events-none',
           isInvalid ? 'outline outline-rose-500' : 'outline-primary focus:outline'
         )}
         {...props}
@@ -109,8 +109,8 @@ export function Textarea({ id, label, name, className, ...props }: TextareaProps
   }, [isInvalid]);
 
   return (
-    <label className="flex flex-col gap-2">
-      <label htmlFor={id} className="text-primary font-semibold">
+    <label className="flex cursor-text flex-col gap-2">
+      <label htmlFor={id} className="text-primary cursor-text font-semibold">
         {label}
       </label>
 
@@ -121,7 +121,7 @@ export function Textarea({ id, label, name, className, ...props }: TextareaProps
         rows={6}
         className={cn(
           className,
-          'bg-secondary-dark text-primary-light outline-primary flex w-full min-w-0 resize-none rounded-md p-4 text-justify text-base shadow-none disabled:pointer-events-none',
+          'bg-secondary-dark text-primary-light outline-primary flex w-full min-w-0 cursor-text resize-none rounded-md p-4 text-justify text-base shadow-none disabled:pointer-events-none',
           isInvalid ? 'outline outline-rose-500' : 'outline-primary focus:outline'
         )}
         {...props}

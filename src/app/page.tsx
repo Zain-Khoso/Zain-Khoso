@@ -18,15 +18,16 @@ export default function LandingPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12">
-        <article className="space-y-8">
+      <section className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12 md:flex-row md:items-center">
+        <article className="flex-1 space-y-8">
           <H1>
             Hi, I am <br /> Zain Ul Abdin
           </H1>
 
           <P>
-            A Full-Stack Developer with 1.5+ years of professional experience based in Sukkur,
-            Pakistan.
+            A Full-Stack Developer based in Sukkur, Pakistan. I have 1.5+ years of professional
+            experience in TypeScript, Firebase, and Algolia. I excel at writing clean, readable and
+            efficient code.
           </P>
 
           <div className="flex flex-wrap items-center gap-4">
@@ -48,28 +49,31 @@ export default function LandingPage() {
           </div>
         </article>
 
-        <article className="bg-secondary-light relative aspect-[9/10] w-full rounded-3xl">
-          <Image alt="Zain Ul Abdin" src={ME} />
+        <article className="bg-secondary-light relative aspect-[9/10] w-full flex-1 rounded-3xl md:aspect-square">
+          <Image alt="Zain Ul Abdin" src={ME} className="max-h-full max-w-full object-contain" />
         </article>
       </section>
 
       {/* Portfolio Section */}
-      <section className="border-secondary-dark space-y-8 border-b-2 pb-12">
+      <section
+        id="portfolio"
+        className="border-secondary-dark space-y-8 border-b-2 pb-12 lg:space-y-10"
+      >
         <header className="space-y-2">
           <H2>Portfolio</H2>
-          <P>
+          <P className="max-w-[480px]">
             Here are some of the selected projects that showcase my passion, experience and drive
             for web development.
           </P>
         </header>
 
         <main className="space-y-16">
-          <article className="flex flex-col gap-4">
-            <div className="bg-secondary-dark grid aspect-[16/12] w-full place-items-center rounded-2xl px-4">
+          <article className="flex flex-col gap-4 md:flex-row">
+            <div className="bg-secondary-dark grid aspect-[16/12] w-full flex-1 place-items-center rounded-2xl px-4">
               <Image alt="Hippopitch Landing Page" src={Hippopitch} className="rounded" />
             </div>
 
-            <div className="space-y-4">
+            <div className="flex-2 space-y-4">
               <H3>A Platform Connecting Entrepreneurs & Investors</H3>
 
               <P>
@@ -106,12 +110,12 @@ export default function LandingPage() {
             </div>
           </article>
 
-          <article className="flex flex-col gap-4">
-            <div className="bg-secondary-dark grid aspect-[16/12] w-full place-items-center rounded-2xl px-4">
+          <article className="flex flex-col gap-4 md:flex-row">
+            <div className="bg-secondary-dark grid aspect-[16/12] w-full flex-1 place-items-center rounded-2xl px-4">
               <Image alt="Projectarium Landing Page" src={Projectarium} className="rounded" />
             </div>
 
-            <div className="space-y-4">
+            <div className="flex-2 space-y-4">
               <H3>A Social Platform For Developers</H3>
 
               <P>
@@ -154,12 +158,12 @@ export default function LandingPage() {
             </div>
           </article>
 
-          <article className="flex flex-col gap-4">
-            <div className="bg-secondary-dark grid aspect-[16/12] w-full place-items-center rounded-2xl px-4">
+          <article className="flex flex-col gap-4 md:flex-row">
+            <div className="bg-secondary-dark grid aspect-[16/12] w-full flex-1 place-items-center rounded-2xl px-4">
               <Image alt="Belly Brains Landing Page" src={BellyBrains} className="rounded" />
             </div>
 
-            <div className="space-y-4">
+            <div className="flex-2 space-y-4">
               <H3>Food Ordering Service</H3>
 
               <P>
@@ -207,10 +211,10 @@ export default function LandingPage() {
       </section>
 
       {/* About Me Section */}
-      <section className="border-secondary-dark space-y-8 border-b-2 pb-12">
+      {/* <section id="about" className="border-secondary-dark space-y-8 border-b-2 pb-12">
         <header className="space-y-2">
           <H2>About Me</H2>
-          <P>
+          <P className="max-w-3xl">
             I am a Full-Stack Developer based in Sukkur, Pakistan. I have 1.5+ Years of remote work
             experience at a Sweden based startup. In technologies like Typescript, Firebase
             ecosystem and Algolia. I excel at writing clean, readable and efficient code. Currently,
@@ -221,7 +225,7 @@ export default function LandingPage() {
         <main>
           <ThemedLink href="/about">Learn more about Me</ThemedLink>
         </main>
-      </section>
+      </section> */}
     </>
   );
 }

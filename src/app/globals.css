@@ -24,10 +24,13 @@
   --font-paragraph: var(--font-manrope);
 }
 
+* {
+  scroll-behavior: smooth;
+  scroll-margin-block: 10rem;
+}
+
 body {
   background: var(--primary-dark);
   color: var(--secondary-light);
   font-family: var(--font-manrope);
-  scroll-behavior: smooth;
-  scroll-margin-block: 10rem;
 }
