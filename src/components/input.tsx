@@ -26,10 +26,6 @@ export function Input({ id, label, name, className, ...props }: InputProps) {
 
   useLayoutEffect(() => {
     if (isInvalid) elem.current?.focus();
-
-    return () => {
-      elem.current?.blur();
-    };
   }, [isInvalid]);
 
   return (

@@ -64,24 +64,24 @@ export default function AboutPage() {
 
         <article className="flex-2 space-y-8">
           <P>
-            I'm a Full-Stack Developer based in Sukkur, Pakistan, with over 1.5 years of
+            I&apos;m a Full-Stack Developer based in Sukkur, Pakistan, with over 1.5 years of
             professional experience building and maintaining real-world web applications. My
             expertise lies in the modern JavaScript ecosystem — particularly TypeScript, Next.js,
             Firebase, and Algolia — where I focus on crafting clean, scalable, and high-performance
             solutions.
           </P>
           <P>
-            I've worked remotely with a Sweden-based startup, contributing to the design,
+            I&apos;ve worked remotely with a Sweden-based startup, contributing to the design,
             development, and deployment of production-grade software used by real clients. That
             experience strengthened my ability to write efficient, maintainable code, collaborate
             across time zones, and deliver features from concept to production with minimal
             supervision.
           </P>
           <P>
-            Beyond technical skills, I'm passionate about building products that solve real problems
-            and provide meaningful user experiences. I enjoy taking on challenges that push me to
-            learn new tools, refine my craft, and grow as a developer. When I’m not coding, I like
-            exploring new design ideas, improving my portfolio, and studying emerging web
+            Beyond technical skills, I&apos;m passionate about building products that solve real
+            problems and provide meaningful user experiences. I enjoy taking on challenges that push
+            me to learn new tools, refine my craft, and grow as a developer. When &apos; not coding,
+            I like exploring new design ideas, improving my portfolio, and studying emerging web
             technologies.
           </P>
 

@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="mx-auto max-w-7xl space-y-8 px-4 py-8 md:px-8" id="contact">
       <section className="flex flex-col gap-8 md:flex-row">
         <header className="flex-1 space-y-2">
-          <H2>Let's Connect</H2>
+          <H2>Let&apos;s Connect</H2>
 
           <P>
             Say hello at&nbsp;
@@ -25,7 +25,7 @@ export default function Footer() {
           </P>
 
           <P>
-            For more info, here's my&nbsp;
+            For more info, here&apos;s my&nbsp;
             <Link
               href="/resume.pdf"
               download="Zain's Resume.pdf"

@@ -168,7 +168,7 @@ export default function LandingPage() {
 
               <P>
                 Belly Brains was my first React Project. I cherish it as one of my best works, not
-                because of it's functionality rather because how quickly I got a grasp of
+                because of it&apos;s functionality rather because how quickly I got a grasp of
                 everything. Prior to Belly Brains I had never worked with React, Redux, Styled
                 Components or Firebase. Yet I still managed to learn each of those along with
                 completing Belly Brains in two weeks.
