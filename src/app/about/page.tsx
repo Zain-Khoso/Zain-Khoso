@@ -1,5 +1,5 @@
 // Assets.
-import { FaGithub, FaLinkedinIn, FaFileDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaDownload } from 'react-icons/fa';
 import { FaXTwitter, FaMedium, FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 // Components.
@@ -78,7 +78,7 @@ export default function AboutPage() {
           </P>
 
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <ButtonLink href="/#contact" icon={FaFileDownload} className="min-w-full md:min-w-0">
+            <ButtonLink href="/#contact" icon={FaDownload} className="min-w-full md:min-w-0">
               Download Resume
             </ButtonLink>
 
