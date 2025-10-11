@@ -6,6 +6,14 @@ import { FaXTwitter, FaMedium, FaArrowUpRightFromSquare } from 'react-icons/fa6'
 import { ButtonLink } from '@/components/button';
 import { H1, H2, H3, P, ThemedLink } from '@/components/typography';
 
+// Types.
+import { Metadata } from 'next';
+
+// Metadata.
+export const metadata: Metadata = {
+  title: 'About Me',
+};
+
 // Data.
 const technologies: string[] = [
   'HTML',

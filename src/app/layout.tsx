@@ -26,7 +26,53 @@ const Font_Manrope = Manrope({
 
 // Metada Definition.
 export const metadata: Metadata = {
-  title: 'Next App',
+  title: {
+    template: '%s | Zain Ul Abdin',
+    default: 'Zain Ul Abdin - Full-Stack Developer',
+  },
+  description:
+    'Full-Stack Web Developer based in Sukkur, Pakistan with 1.5+ years of professional experience building modern, scalable web applications using TypeScript, React, Next.js, Firebase, and Algolia.',
+  keywords: [
+    'Zain Ul Abdin',
+    'Zain Khoso',
+    'Full Stack Developer',
+    'Next.js Developer',
+    'React Developer',
+    'Firebase Developer',
+    'Frontend Engineer',
+    'JavaScript',
+    'TypeScript',
+    'Web Developer Pakistan',
+  ],
+  authors: [{ name: 'Zain Ul Abdin', url: 'https://linkedin.com/in/zain-khoso' }],
+  creator: 'Zain Ul Abdin',
+  publisher: 'Zain Ul Abdin',
+  metadataBase: new URL('https://zain-khoso.vercel.app'),
+  openGraph: {
+    title: 'Zain Ul Abdin | Full-Stack Developer',
+    description:
+      'Experienced Full-Stack Developer specializing in TypeScript, Next.js, and Firebase. Passionate about building user-focused, high-performance web applications.',
+    url: 'https://zain-khoso.vercel.app',
+    siteName: 'Zain Ul Abdin Portfolio',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Zain Ul Abdin Portfolio Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zain Ul Abdin | Full-Stack Developer',
+    description:
+      'Full-Stack Developer experienced with Next.js, TypeScript, Firebase, and Algolia.',
+    creator: '@Zain_Khoso_Dev',
+    images: ['/og-image.png'],
+  },
 };
 
 // Root Layout that contains the entire app.
