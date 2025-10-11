@@ -86,7 +86,12 @@ export default function AboutPage() {
           </P>
 
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <ButtonLink href="/#contact" icon={FaDownload} className="min-w-full md:min-w-0">
+            <ButtonLink
+              href="/resume.pdf"
+              download="Zain's Resume.pdf"
+              icon={FaDownload}
+              className="min-w-full md:min-w-0"
+            >
               Download Resume
             </ButtonLink>
 

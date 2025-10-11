@@ -1,6 +1,5 @@
 // Lib Imports.
 import Link from 'next/link';
-import { HTMLAttributeAnchorTarget } from 'react';
 
 // Utils.
 import { cn } from '@/utils';
@@ -12,11 +11,10 @@ type CustomProps = {
   variant?: 'default' | 'icon';
   icon?: IconType;
 };
-type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & CustomProps;
-type LinkProps = React.HTMLAttributes<HTMLAnchorElement> &
+type ButtonProps = React.ComponentProps<'button'> & CustomProps;
+type LinkProps = React.ComponentProps<'a'> &
   CustomProps & {
     href: string;
-    target?: HTMLAttributeAnchorTarget;
   };
 
 // Button component for the entire app.
