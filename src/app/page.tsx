@@ -50,7 +50,13 @@ export default function LandingPage() {
         </article>
 
         <article className="bg-secondary-light relative aspect-[9/10] w-full flex-1 rounded-3xl md:aspect-square">
-          <Image alt="Zain Ul Abdin" src={ME} className="max-h-full max-w-full object-contain" />
+          <Image
+            alt="Zain Ul Abdin"
+            src={ME}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 592px"
+            className="max-h-full max-w-full object-contain"
+          />
         </article>
       </section>
 
