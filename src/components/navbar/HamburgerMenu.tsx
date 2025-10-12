@@ -11,12 +11,11 @@ import { cn } from '@/utils';
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleToggle = () => setIsOpen((val) => !val);
+
   return (
     <>
-      <button
-        className="relative z-50 h-12 w-12 p-1 md:hidden"
-        onClick={() => setIsOpen((val) => !val)}
-      >
+      <button className="relative z-50 h-12 w-12 p-1 md:hidden" onClick={handleToggle}>
         <span
           className={cn(
             'bg-secondary-light absolute left-1/2 h-1 w-4/5 -translate-1/2 rounded-full transition',
@@ -42,17 +41,17 @@ export default function HamburgerMenu() {
 
         <ul className="flex flex-col items-center gap-8">
           <li>
-            <Link href="/about" className="text-xl">
+            <Link href="/about" className="text-xl" onClick={handleToggle}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/#portfolio" className="text-xl">
+            <Link href="/#portfolio" className="text-xl" onClick={handleToggle}>
               Portfolio
             </Link>
           </li>
           <li>
-            <Link href="/#contact" className="text-xl">
+            <Link href="/#contact" className="text-xl" onClick={handleToggle}>
               Contact
             </Link>
           </li>
