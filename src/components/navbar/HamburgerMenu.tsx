@@ -2,7 +2,7 @@
 
 // Lib Imports.
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Utils.
 import { cn } from '@/utils';
@@ -12,6 +12,17 @@ export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((val) => !val);
+
+  useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+
+    if (isOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = originalStyle;
+
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
+  }, [isOpen]);
 
   return (
     <>

@@ -9,8 +9,8 @@ import HamburgerMenu from './HamburgerMenu';
 export default function Navbar() {
   return (
     <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 md:px-8">
-      <Link href="/">
-        <Big className="z-50">Zain Ul Abdin</Big>
+      <Link href="/" className="z-50">
+        <Big>Zain Ul Abdin</Big>
       </Link>
 
       <HamburgerMenu />
