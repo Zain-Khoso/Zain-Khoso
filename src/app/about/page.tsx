@@ -1,6 +1,7 @@
 // Assets.
 import { FaGithub, FaLinkedinIn, FaDownload } from 'react-icons/fa';
-import { FaXTwitter, FaMedium, FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { TbBrandUpwork, TbBrandFiverr } from 'react-icons/tb';
 
 // Components.
 import { ButtonLink } from '@/components/button';
@@ -110,17 +111,19 @@ export default function AboutPage() {
             ></ButtonLink>
 
             <ButtonLink
-              href="https://x.com/ZAIN_KHOSO_DEV"
+              href="https://www.fiverr.com/zainkhosodev"
               target="_blank"
               variant="icon"
-              icon={FaXTwitter}
+              icon={TbBrandFiverr}
+              iconClassName="fill-none stroke-primary"
             ></ButtonLink>
 
             <ButtonLink
-              href="https://medium.com/@zain.khoso.dev"
+              href="https://www.upwork.com/freelancers/~0149087552e102ee7e"
               target="_blank"
               variant="icon"
-              icon={FaMedium}
+              icon={TbBrandUpwork}
+              iconClassName="fill-none stroke-primary"
             ></ButtonLink>
           </div>
         </article>

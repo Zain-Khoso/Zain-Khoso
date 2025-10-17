@@ -6,6 +6,7 @@ import { cn } from '@/utils';
 
 // Types.
 import { IconType } from 'react-icons';
+import { ClassNameValue } from 'tailwind-merge';
 
 type CustomProps = {
   variant?: 'default' | 'icon';
@@ -15,6 +16,7 @@ type ButtonProps = React.ComponentProps<'button'> & CustomProps;
 type LinkProps = React.ComponentProps<'a'> &
   CustomProps & {
     href: string;
+    iconClassName?: ClassNameValue;
   };
 
 // Button component for the entire app.
@@ -57,6 +59,7 @@ export function ButtonLink({
   variant = 'default',
   className,
   icon: Icon,
+  iconClassName,
   ...props
 }: LinkProps) {
   return (
@@ -79,7 +82,7 @@ export function ButtonLink({
           )}
         </>
       ) : (
-        Icon && <Icon size={24} className="fill-primary" />
+        Icon && <Icon size={24} className={cn('fill-primary', iconClassName)} />
       )}
     </Link>
   );

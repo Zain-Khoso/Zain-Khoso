@@ -2,8 +2,9 @@
 import Image from 'next/image';
 
 // Assets.
-import { FaArrowDown, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaDownload, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { TbBrandUpwork, TbBrandFiverr } from 'react-icons/tb';
 import ME from '@/assets/me.png';
 import Projectarium from '@/assets/projectarium.png';
 import Hippopitch from '@/assets/hippopitch.png';
@@ -30,21 +31,44 @@ export default function LandingPage() {
             efficient code.
           </P>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <ButtonLink href="/#contact" icon={FaArrowDown}>
-              Contact Me
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <ButtonLink
+              href="/resume.pdf"
+              download="Zain's Resume.pdf"
+              icon={FaDownload}
+              className="min-w-full md:min-w-0"
+            >
+              Download Resume
             </ButtonLink>
+
             <ButtonLink
               href="https://linkedin.com/in/zain-khoso"
               target="_blank"
               variant="icon"
               icon={FaLinkedinIn}
             ></ButtonLink>
+
             <ButtonLink
               href="https://github.com/Zain-Khoso"
               target="_blank"
               variant="icon"
               icon={FaGithub}
+            ></ButtonLink>
+
+            <ButtonLink
+              href="https://www.fiverr.com/zainkhosodev"
+              target="_blank"
+              variant="icon"
+              icon={TbBrandFiverr}
+              iconClassName="fill-none stroke-primary"
+            ></ButtonLink>
+
+            <ButtonLink
+              href="https://www.upwork.com/freelancers/~0149087552e102ee7e"
+              target="_blank"
+              variant="icon"
+              icon={TbBrandUpwork}
+              iconClassName="fill-none stroke-primary"
             ></ButtonLink>
           </div>
         </article>
