@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 // Assets.
-import { FaDownload, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaArrowDown, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import { TbBrandUpwork, TbBrandFiverr } from 'react-icons/tb';
 import ME from '@/assets/me.png';
@@ -32,13 +32,8 @@ export default function LandingPage() {
           </P>
 
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <ButtonLink
-              href="/resume.pdf"
-              download="Zain's Resume.pdf"
-              icon={FaDownload}
-              className="min-w-full md:min-w-0"
-            >
-              Download Resume
+            <ButtonLink href="#contact" icon={FaArrowDown} className="min-w-full md:min-w-0">
+              Contact Me
             </ButtonLink>
 
             <ButtonLink
