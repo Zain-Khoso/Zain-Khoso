@@ -1,5 +1,6 @@
 // Lib Imports.
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Assets.
 import { FaArrowDown, FaGithub, FaLinkedinIn } from 'react-icons/fa';
@@ -26,9 +27,17 @@ export default function LandingPage() {
           </H1>
 
           <P>
-            A Full-Stack Developer based in Sukkur, Pakistan. I have 1.5+ years of professional
-            experience in TypeScript, Firebase, and Algolia. I excel at writing clean, readable and
-            efficient code.
+            an individual with over 1.5 years of professional experience in web development. I have
+            worked with international clients to bring their desired functionality and visuals to
+            life.{' '}
+            <Link
+              href="https://linkedin.com/in/zain-khoso"
+              target="_blank"
+              className="text-primary-light decoration-primary underline underline-offset-4"
+            >
+              Let's connect
+            </Link>{' '}
+            and discuss your project!
           </P>
 
           <div className="flex flex-wrap items-center justify-between gap-4">
