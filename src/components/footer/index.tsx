@@ -1,11 +1,13 @@
+// Lib Imports.
+import Link from 'next/link';
+
 // Assets.
-import { FaLinkedinIn, FaGithub, FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa6';
+import { TbBrandFiverr, TbBrandUpwork } from 'react-icons/tb';
 
 // Components.
-import Link from 'next/link';
-import { H2, P } from '../typography';
 import ContactForm from './ContactForm';
-import { TbBrandFiverr, TbBrandUpwork } from 'react-icons/tb';
+import { H2, P } from '../typography';
 
 // Footer component for the app. Also holds contact form.
 export default function Footer() {

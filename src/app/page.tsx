@@ -75,7 +75,7 @@ export default function LandingPage() {
               target="_blank"
               className="text-primary-light decoration-primary underline underline-offset-4"
             >
-              Let's connect
+              Let&apos;s connect
             </Link>{' '}
             and discuss your project!
           </P>

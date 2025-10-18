@@ -4,9 +4,6 @@
 import { useContactForm } from '@/utils/contactForm';
 import { cn } from '@/utils';
 
-// Assets.
-import { IoMdSend } from 'react-icons/io';
-
 // Components.
 import { Input, Select, Textarea } from '../input';
 import { Button } from '../button';
