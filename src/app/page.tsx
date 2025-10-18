@@ -331,7 +331,10 @@ export default function LandingPage() {
       </section>
 
       {/* About Me Section */}
-      <section className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12 md:flex-row">
+      <section
+        id="about"
+        className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12 md:flex-row"
+      >
         <header className="flex-1 space-y-2">
           <H2>About Me</H2>
 

@@ -8,7 +8,7 @@ import HamburgerMenu from './HamburgerMenu';
 // Data.
 const navLinks: { href: string; label: string }[] = [
   {
-    href: '/about',
+    href: '/#about',
     label: 'About',
   },
   {
