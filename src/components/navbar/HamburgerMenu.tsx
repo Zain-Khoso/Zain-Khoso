@@ -7,8 +7,13 @@ import { useState, useEffect } from 'react';
 // Utils.
 import { cn } from '@/utils';
 
+// Types.
+type Props = {
+  navLinks: { href: string; label: string }[];
+};
+
 // For mobile Navigation.
-export default function HamburgerMenu() {
+export default function HamburgerMenu({ navLinks }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((val) => !val);
@@ -50,22 +55,14 @@ export default function HamburgerMenu() {
         {/* Placeholder element */}
         <div className="h-24 w-full"></div>
 
-        <ul className="flex flex-col items-center gap-8">
-          <li>
-            <Link href="/about" className="text-xl" onClick={handleToggle}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/#portfolio" className="text-xl" onClick={handleToggle}>
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link href="/#contact" className="text-xl" onClick={handleToggle}>
-              Contact
-            </Link>
-          </li>
+        <ul className="flex flex-col items-start gap-8">
+          {navLinks.map((link) => (
+            <li key={`ASIDE_LINK-${link.label}`}>
+              <Link href={link.href} className="text-xl" onClick={handleToggle}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </aside>
     </>

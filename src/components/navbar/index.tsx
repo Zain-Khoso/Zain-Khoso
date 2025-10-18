@@ -5,6 +5,22 @@ import Link from 'next/link';
 import { Big } from '../typography';
 import HamburgerMenu from './HamburgerMenu';
 
+// Data.
+const navLinks: { href: string; label: string }[] = [
+  {
+    href: '/about',
+    label: 'About',
+  },
+  {
+    href: '/#portfolio',
+    label: 'Portfolio',
+  },
+  {
+    href: '/#contact',
+    label: 'Contact',
+  },
+];
+
 // This navbar is used for the entire app.
 export default function Navbar() {
   return (
@@ -13,19 +29,20 @@ export default function Navbar() {
         <Big>Zain Ul Abdin</Big>
       </Link>
 
-      <HamburgerMenu />
+      <HamburgerMenu navLinks={navLinks} />
 
       {/* Navigation */}
       <div className="hidden items-center gap-6 md:flex">
-        <Link href="/about" className="hover:text-primary-light">
-          About
-        </Link>
-        <Link href="/#portfolio" className="hover:text-primary-light">
-          Portfolio
-        </Link>
-        <Link href="/#contact" className="hover:text-primary-light">
-          Contact
-        </Link>
+        {navLinks.map((link) => (
+          <Link
+            key={`NAVLINK-${link.label}`}
+            href={link.href}
+            className="hover:text-primary-light group flex flex-col gap-1"
+          >
+            {link.label}
+            <span className="bg-primary transition[width] h-[1px] w-0 duration-200 ease-out group-hover:w-full"></span>
+          </Link>
+        ))}
       </div>
     </nav>
   );
