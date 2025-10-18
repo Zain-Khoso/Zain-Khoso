@@ -30,9 +30,10 @@ export function Button({
   return (
     <button
       className={cn(
-        'group flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase transition-all duration-300',
+        'group hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
         variant === 'default' && 'bg-primary text-primary-dark px-6 py-4',
-        variant === 'icon' && 'bg-primary/15 text-primary-dark aspect-square p-4',
+        variant === 'icon' &&
+          'bg-primary/15 hover:bg-primary/30 text-primary-dark aspect-square p-4',
         className
       )}
       {...props}
@@ -41,8 +42,10 @@ export function Button({
         <>
           {children}{' '}
           {Icon && (
-            <div className="bg-primary-dark aspect-square rounded-full p-1 transition-all duration-300">
-              <Icon className="fill-primary-light h-0 w-0 transition-all duration-300 group-hover:h-4 group-hover:w-4" />
+            <div className="relative grid w-5 place-items-center">
+              <div className="bg-primary-dark absolute top-1/5 left-1/2 aspect-square w-fit -translate-1/2 rounded-full p-1 transition-all duration-300">
+                <Icon className="fill-primary-light h-0 w-0 transition-all duration-300 group-hover:h-4 group-hover:w-4" />
+              </div>
             </div>
           )}
         </>
@@ -65,9 +68,10 @@ export function ButtonLink({
   return (
     <Link
       className={cn(
-        'group flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase transition-all duration-300',
+        'group hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
         variant === 'default' && 'bg-primary text-primary-dark px-6 py-4',
-        variant === 'icon' && 'bg-primary/15 text-primary-dark aspect-square p-4',
+        variant === 'icon' &&
+          'bg-primary/15 hover:bg-primary/30 text-primary-dark aspect-square p-4',
         className
       )}
       {...props}
@@ -76,8 +80,10 @@ export function ButtonLink({
         <>
           {children}{' '}
           {Icon && (
-            <div className="bg-primary-dark aspect-square rounded-full p-1 transition-all duration-300">
-              <Icon className="fill-primary-light h-0 w-0 transition-all duration-300 group-hover:h-4 group-hover:w-4" />
+            <div className="relative grid w-5 place-items-center">
+              <div className="bg-primary-dark absolute top-1/5 left-1/2 aspect-square w-fit -translate-1/2 rounded-full p-1 transition-all duration-300">
+                <Icon className="fill-primary-light h-0 w-0 transition-all duration-300 group-hover:h-4 group-hover:w-4" />
+              </div>
             </div>
           )}
         </>
