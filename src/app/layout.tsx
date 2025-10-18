@@ -1,5 +1,6 @@
 // Lib Imports.
 import { Bebas_Neue, Manrope } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 // Assets.
 import './globals.css';
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: Readonly<ChildrenProp>) {
     <html lang="en">
       <body className={`${Font_Bebas.variable} ${Font_Manrope.variable} antialiased`}>
         <Toast />
+        <Analytics />
 
         <Navbar />
 
