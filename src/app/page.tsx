@@ -90,6 +90,7 @@ export default function LandingPage() {
               target="_blank"
               variant="icon"
               icon={FaLinkedinIn}
+              aria-label="LinkedIn"
             ></ButtonLink>
 
             <ButtonLink
@@ -97,6 +98,7 @@ export default function LandingPage() {
               target="_blank"
               variant="icon"
               icon={FaGithub}
+              aria-label="Github"
             ></ButtonLink>
 
             <ButtonLink
@@ -105,6 +107,7 @@ export default function LandingPage() {
               variant="icon"
               icon={TbBrandFiverr}
               iconClassName="fill-none stroke-primary"
+              aria-label="Fiverr"
             ></ButtonLink>
 
             <ButtonLink
@@ -113,6 +116,7 @@ export default function LandingPage() {
               variant="icon"
               icon={TbBrandUpwork}
               iconClassName="fill-none stroke-primary"
+              aria-label="Upwork"
             ></ButtonLink>
           </div>
         </article>
@@ -386,6 +390,7 @@ export default function LandingPage() {
               target="_blank"
               variant="icon"
               icon={FaLinkedinIn}
+              aria-label="LinkedIn"
             ></ButtonLink>
 
             <ButtonLink
@@ -393,6 +398,7 @@ export default function LandingPage() {
               target="_blank"
               variant="icon"
               icon={FaGithub}
+              aria-label="Github"
             ></ButtonLink>
 
             <ButtonLink
@@ -401,6 +407,7 @@ export default function LandingPage() {
               variant="icon"
               icon={TbBrandFiverr}
               iconClassName="fill-none stroke-primary"
+              aria-label="Fiverr"
             ></ButtonLink>
 
             <ButtonLink
@@ -409,6 +416,7 @@ export default function LandingPage() {
               variant="icon"
               icon={TbBrandUpwork}
               iconClassName="fill-none stroke-primary"
+              aria-label="Upwork"
             ></ButtonLink>
           </div>
         </article>
