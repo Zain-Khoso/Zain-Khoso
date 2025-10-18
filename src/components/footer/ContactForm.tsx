@@ -66,10 +66,7 @@ export default function ContactForm() {
         onChange={(event) => setData('message', event.target.value)}
       ></Textarea>
 
-      <Button
-        className={cn('w-full', isLoading ? 'pointer-events-none opacity-80' : '')}
-        icon={IoMdSend}
-      >
+      <Button className={cn('w-full', isLoading ? 'pointer-events-none opacity-80' : '')}>
         Submit
       </Button>
     </form>

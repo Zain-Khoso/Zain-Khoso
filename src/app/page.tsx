@@ -130,7 +130,7 @@ export default function LandingPage() {
 
       {/* Experience Section */}
       <section className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12 md:flex-row">
-        <header className="space-y-2">
+        <header className="flex-1 space-y-2">
           <H2>Experience</H2>
 
           <P className="max-w-[480px]">
@@ -332,7 +332,7 @@ export default function LandingPage() {
 
       {/* About Me Section */}
       <section className="border-secondary-dark flex flex-col gap-8 border-b-2 pb-12 md:flex-row">
-        <header className="space-y-2">
+        <header className="flex-1 space-y-2">
           <H2>About Me</H2>
 
           <P className="max-w-[480px]">

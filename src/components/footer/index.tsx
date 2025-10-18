@@ -5,6 +5,7 @@ import { FaLinkedinIn, FaGithub, FaXTwitter } from 'react-icons/fa6';
 import Link from 'next/link';
 import { H2, P } from '../typography';
 import ContactForm from './ContactForm';
+import { TbBrandFiverr, TbBrandUpwork } from 'react-icons/tb';
 
 // Footer component for the app. Also holds contact form.
 export default function Footer() {
@@ -37,15 +38,25 @@ export default function Footer() {
 
           <div className="mt-8 flex items-center gap-4 md:gap-8">
             <Link href="https://linkedin.com/in/zain-khoso" target="_blank">
-              <FaLinkedinIn className="fill-primary" size={24} />
+              <FaLinkedinIn className="fill-primary/65 hover:fill-primary transition" size={24} />
             </Link>
 
             <Link href="https://github.com/Zain-Khoso" target="_blank">
-              <FaGithub className="fill-primary" size={24} />
+              <FaGithub className="fill-primary/65 hover:fill-primary transition" size={24} />
             </Link>
 
-            <Link href="https://x.com/ZAIN_KHOSO_DEV" target="_blank">
-              <FaXTwitter className="fill-primary" size={24} />
+            <Link href="https://www.fiverr.com/zainkhosodev" target="_blank">
+              <TbBrandFiverr
+                className="stroke-primary/65 hover:stroke-primary fill-none transition"
+                size={24}
+              />
+            </Link>
+
+            <Link href="https://www.upwork.com/freelancers/~0149087552e102ee7e" target="_blank">
+              <TbBrandUpwork
+                className="stroke-primary/65 hover:stroke-primary fill-none transition"
+                size={24}
+              />
             </Link>
           </div>
         </header>

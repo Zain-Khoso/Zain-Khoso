@@ -30,7 +30,7 @@ export function Button({
   return (
     <button
       className={cn(
-        'group hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
+        'group focus:outline-primary/60 hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
         variant === 'default' && 'bg-primary text-primary-dark px-6 py-4',
         variant === 'icon' &&
           'bg-primary/15 hover:bg-primary/30 text-primary-dark aspect-square p-4',
@@ -68,7 +68,7 @@ export function ButtonLink({
   return (
     <Link
       className={cn(
-        'group hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
+        'group focus:outline-primary/60 hover:outline-primary/60 outline-primary-dark flex w-fit cursor-pointer items-center justify-center gap-4 rounded-full font-bold uppercase outline-4 transition-all duration-300',
         variant === 'default' && 'bg-primary text-primary-dark px-6 py-4',
         variant === 'icon' &&
           'bg-primary/15 hover:bg-primary/30 text-primary-dark aspect-square p-4',
