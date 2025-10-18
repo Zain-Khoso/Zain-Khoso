@@ -27,6 +27,11 @@
 * {
   scroll-behavior: smooth;
   scroll-margin-block: 10rem;
+
+  &::selection {
+    background-color: #d3e97aba; /* App's Primary color with less opacity */
+    color: var(--primary-light);
+  }
 }
 
 body {
